@@ -1,4 +1,4 @@
-module github.com/fibergo/ws
+module github.com/fibergo/fastws
 
 go 1.14
 
