@@ -149,6 +149,7 @@ func (upgr *Upgrader) Upgrade(ctx *fasthttp.RequestCtx) {
 			})
 		}
 	}
+	ctx.Error("Upgrade Required", 426)
 }
 
 var shaPool = sync.Pool{
