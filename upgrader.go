@@ -148,8 +148,9 @@ func (upgr *Upgrader) Upgrade(ctx *fasthttp.RequestCtx) {
 				releaseConn(conn)
 			})
 		}
+	} else {
+		ctx.Error("Upgrade Required", 426)
 	}
-	ctx.Error("Upgrade Required", 426)
 }
 
 var shaPool = sync.Pool{
